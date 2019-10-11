@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class=".inp">
+        <img  style="border-radius: 50%" src="assets/quz1.png" width="80" height="80">
+      LOGIN PAGE
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label class=".inp">Email</ion-label>
+        <ion-input  [(ngModel)]="email"></ion-input></ion-item>
+      <ion-item>
+        <ion-label class=".inp">Password</ion-label>
+        <ion-input [(ngModel)]="password"></ion-input>
+      </ion-item>
+        <ion-button (click)="login()">Login</ion-button>
+        <ion-button (click)="resetPassword()">Forget password</ion-button>
+        
+        <a routerLink='/register'>Click here to register</a>
+        
+</ion-content> 

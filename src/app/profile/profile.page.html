@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img [src]=" currentImage" *ngIf="currentImage">
+
+<ion-fab vertical="top" horizontal="center" slot="fixed">
+<ion-fab-button color="primary" (click)="takePicture()" >
+<ion-icon name="camera"></ion-icon>
+</ion-fab-button>
+</ion-fab><br><br>
+<ion-card>
+    <ion-card-header>
+    <ion-card-subtitle>
+           
+      <b>
+        <strong>
+          User Information
+        </strong>
+      </b>
+    </ion-card-subtitle>
+
+  </ion-card-header>
+      <div *ngFor="let usered of used">
+      Name:{{usered.Name}}<br>
+      Surname:{{usered.Surname}}<br>
+      Physical Address:{{usered.Physicaladdress}}<br>
+      Email:{{usered.Email}}
+  
+    </div>   
+</ion-card>
+<ion-button routerLink="/categories">Categories</ion-button>
+<ion-button (click)="logout()">Logout</ion-button>
+</ion-content>
+
+

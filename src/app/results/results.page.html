@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <img  style="border-radius: 50%" src="assets\quz1.png" width="80" height="80">
+      RESULTS PAGE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <div>
+  <ion-card *ngFor = "let quiz of Questions">
+    <ion-card-header>
+      <ion-card-title>
+          {{quiz.Counter}}. {{quiz.Question}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-radio-group (ionChange) = "setData($event,quiz)">
+          <ion-item *ngFor = "let A of quiz.Answer">
+            <ion-label>{{A}}</ion-label>
+            <ion-radio slot="start" value="{{A}}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+    <p style = "text-align: center;">
+      <ion-button size = "small" shape = "round" fill="outline">
+        Next</ion-button>
+    </p>
+  </ion-card>
+  <p style = "text-align: center;">
+    <ion-button size = "small" shape = "round" fill="outline">
+      SUBMIT</ion-button>
+  </p>
+</div>
+</ion-content>

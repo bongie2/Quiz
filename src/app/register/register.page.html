@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        <img  style="border-radius: 50%" src="assets\quz1.png" width="80" height="80">
+      Registration Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>Name:</ion-label>
+        <ion-input  [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Surname:</ion-label>
+          <ion-input  [(ngModel)]="surname"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Physical address</ion-label>
+            <ion-input [(ngModel)]="physicaladdress"></ion-input>
+          </ion-item>
+    <ion-item>
+        <ion-label>Email Address</ion-label>
+        <ion-input  [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input  [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-button (click)="register()" routerLink='/login'>Save</ion-button>
+             
+</ion-content>

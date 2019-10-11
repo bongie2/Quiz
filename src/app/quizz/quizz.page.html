@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="inp">quizz</ion-title>
+    <ion-navbar mainPageNavBarColor>
+      <button menuToggle start>
+     <ion-icon name="menu"></ion-icon>
+    </button>
+   <ion-menu [content]="mycontent">
+   <ion-content>
+     <ion-list>
+       <button menuClose ion-item detail-none>Close Menu</button>
+     </ion-list>
+        <ion-list>
+       <button menuClose ion-item detail-none>Close Menu 2</button>
+     </ion-list>
+        <ion-list>
+       <button menuClose ion-item detail-none>Close Menu 3</button>
+     </ion-list>
+   </ion-content>
+ </ion-menu>
+ <ion-nav #mycontent [root]="rootPage"></ion-nav>
+ </ion-navbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>

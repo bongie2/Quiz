@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class=".inp">
+        <img  style="border-radius: 50%" src="assets\quz1.png" width="80" height="80">
+      CATEGORIES PAGE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h1 class=".inp">Test your mind</h1>
+<div>
+  <ion-card *ngFor = "let cat of Question" routerLink='/quiz' (click)="getQuiz();setID(cat.Category_key)" >
+      <ion-card-header>
+        <ion-card-title>
+          {{cat.Categories}}
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+</div>
+<ion-button routerLink='/profile'>User Profile</ion-button>
+<ion-button (click)="logout()">Logout</ion-button>
+</ion-content>
